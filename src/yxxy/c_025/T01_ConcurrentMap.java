@@ -1,25 +1,21 @@
 /**
  * http://blog.csdn.net/sunxianghuang/article/details/52221913 
  * http://www.educity.cn/java/498061.html
- * ÔÄ¶Áconcurrentskiplistmap
+ * é˜…è¯»concurrentskiplistmap
  */
 package yxxy.c_025;
 
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CountDownLatch;
 
 public class T01_ConcurrentMap {
 	public static void main(String[] args) {
-		//Map<String, String> map = new ConcurrentHashMap<>();
-		Map<String, String> map = new ConcurrentSkipListMap<>(); //¸ß²¢·¢²¢ÇÒÅÅĞò
-		
-		//Map<String, String> map = new Hashtable<>();
-		//Map<String, String> map = new HashMap<>(); //Collections.synchronizedXXX
+		//Map<String, String> map = new ConcurrentHashMap<>();  //700
+		//Map<String, String> map = new ConcurrentSkipListMap<>(); //é«˜å¹¶å‘å¹¶ä¸”æ’åº  950
+		//Map<String, String> map = new Hashtable<>();		//900
+		Map<String, String> map = Collections.synchronizedMap(new HashMap<>()); //Collections.synchronizedXXX  900
 		//TreeMap
 		Random r = new Random();
 		Thread[] ths = new Thread[100];

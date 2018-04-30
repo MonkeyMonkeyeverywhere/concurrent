@@ -1,5 +1,5 @@
 /**
- * �̳߳صĸ���
+ * 线程池的概念
  * nasa
  */
 package yxxy.c_026;
@@ -19,7 +19,7 @@ public class T07_ParallelComputing {
 		long end = System.currentTimeMillis();
 		System.out.println(end - start);
 		
-		final int cpuCoreNum = 4;
+		final int cpuCoreNum = 8;
 		
 		ExecutorService service = Executors.newFixedThreadPool(cpuCoreNum);
 		

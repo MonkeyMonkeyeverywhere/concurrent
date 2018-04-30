@@ -20,7 +20,7 @@ public class T12_ForkJoinPool {
 	}
 	
 	/*
-	static class AddTask extends RecursiveAction { 
+	static class AddTask extends RecursiveAction {
 		
 		int start, end;
 		
@@ -51,8 +51,8 @@ public class T12_ForkJoinPool {
 		
 	}
 	*/
-	
-	static class AddTask extends RecursiveTask<Long> { 
+
+	static class AddTask extends RecursiveTask<Long> {
 		
 		int start, end;
 		
